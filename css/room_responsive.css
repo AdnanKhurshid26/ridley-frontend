@@ -1,0 +1,295 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media screen and (max-width: 800px) {
+  /************************* HEADER *************************************/
+  .main-nav-list {
+    position: absolute;
+    height: 102vh;
+    top: 0rem;
+    right: 0;
+    gap: 3vh;
+    background-color: rgba(20, 20, 20, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+    width: 60%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 10;
+  }
+
+  .burger {
+    display: block;
+    z-index: 10;
+  }
+  .nav-active {
+    transform: translateX(2%);
+  }
+  nav {
+    padding: 1.6vh;
+  }
+
+  header {
+    width: 100vw;
+    position: fixed;
+    z-index: 10;
+  }
+
+  .main-nav-link:visited,
+  .main-nav-link:link {
+    font-size: 1.8vh;
+    font-weight: 800;
+    letter-spacing: 3.2px;
+    line-height: 1.3;
+    padding: 0.7vh 1.4vh;
+  }
+  .logo img {
+    height: 6vw;
+  }
+
+  #room-container {
+    padding-top: 15vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3vh;
+  }
+
+  .room-content {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .room-form {
+    width: 100%;
+    padding: 4vw;
+  }
+  .room-icons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1vw;
+    width: 100%;
+  }
+  .icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5vw;
+  }
+  .icons label {
+    color: #4e4e4e;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 2.4vw;
+  }
+  .material-icons {
+    font-size: 5vw;
+    font-weight: 300;
+    color: #a3a3a3;
+  }
+  .room-form {
+    padding: 2vw;
+    gap: 3vw;
+  }
+  .check-inout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2vw;
+  }
+  .date-field {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+  }
+  .date-field label {
+    font-size: 4.2vw;
+  }
+  .date-field input {
+    padding: 1.6vw;
+    height: 35px;
+    border-radius: 0.6vw;
+  }
+  .person-counter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5vw;
+    margin-bottom: 3vh;
+  }
+  .counter-field {
+    gap: 1.2vw;
+  }
+
+  .counter-btn input {
+    width: 10vw;
+    text-align: center;
+    height: 4.6vw;
+  }
+  .fa-plus {
+    height: 4.6vw;
+    width: 5vw;
+  }
+  .fa-minus {
+    height: 4.6vw;
+    width: 5vw;
+  }
+  .input-field {
+    gap: 2vw;
+  }
+
+  .input-field label {
+    font-size: 4.2vw;
+  }
+  .input-field input {
+    height: 36px;
+    border-radius: 0.6vw;
+    padding: 0vw 2.2vw;
+    font-size: 3vw;
+  }
+
+  .primary-btn {
+    width: 100%;
+    height: 40px;
+    border-radius: 0.6vw;
+    color: rgb(20, 20, 20);
+    font-weight: 500;
+    font-size: 4.4vw;
+  }
+
+  .room-details {
+    width: 100%;
+    margin: auto;
+    padding: 3vw;
+  }
+  .description h1 {
+    font-size: 6vw;
+  }
+  .description p {
+    font-size: 2.8vw;
+    line-height: 1.4;
+    letter-spacing: 1.2px;
+  }
+  .room-amenities h3 {
+    font-size: 4.5vw;
+  }
+  .room-amenities p {
+    font-size: 3vw;
+    line-height: 1.4;
+    margin-bottom: 5vw;
+  }
+  .amenities-list {
+    width: 100%;
+  }
+  .hotel-policy {
+    width: 100%;
+  }
+  .hotel-policy h2 {
+    font-size: 4.5vw;
+  }
+  .hotel-policy p {
+    font-size: 3vw;
+  }
+  .cta-btn {
+    display: block;
+  }
+  .booknow-btn {
+    background-color: #05c0c7;
+    color: #fff;
+  }
+  /************************* FOOTER*************************************/
+  footer {
+    margin-top: 10vw;
+  }
+  .top {
+    grid-template-columns: 1fr;
+    gap: 2vw;
+    padding: 6vw;
+  }
+
+  .left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .left img {
+    height: 10vw;
+    margin-bottom: 4vw;
+  }
+
+  .left p {
+    font-size: 2.8vw;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .middle {
+    align-items: flex-start;
+    justify-content: center;
+    display: none;
+  }
+  .middle h3 {
+    font-size: 3.6vw;
+
+    letter-spacing: 0.5px;
+    padding: 1vw;
+    margin-bottom: 2.6vw;
+  }
+  .middle ul {
+    align-items: flex-start;
+    gap: 2.4vw;
+  }
+
+  .middle ul li a {
+    font-size: 4vw;
+  }
+  .right h3 {
+    font-size: 3.6vw;
+
+    letter-spacing: 0.5px;
+    padding: 1vw;
+    margin-bottom: 2.6vw;
+  }
+  .right p {
+    font-size: 2.8vw;
+  }
+
+  .social {
+    width: 100%;
+    justify-content: center;
+    gap: 6vw;
+  }
+
+  .social a i {
+    font-size: 3.2rem;
+  }
+
+  .bottom {
+    padding: 6vw;
+  }
+
+  .bottom p {
+    font-size: 3.2vw;
+  }
+  .carousel-item {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+  }
+}

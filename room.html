@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>RIDLEY</title>
+    <link href="img/fav.png" rel="icon">
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/c06afd5824.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="css/room.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/room_responsive.css" />
+
+</head>
+
+
+<body class="vh100">
+    <div class="backdrop overlay hidden"></div>
+    <header id="header">
+        <nav>
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <ul class="main-nav-list">
+                <li><a class="main-nav-link home btn-cta" href="">home</a></li>
+                <li><a class="main-nav-link experience" href="#experience">experience us</a></li>
+                <li><a class="main-nav-link rooms" href="#rooms">Our Rooms</a></li>
+                <li><a class="main-nav-link gallery" href="">Gallery</a></li>
+                <li><a class="main-nav-link contact" href="">contact</a></li>
+                <li class="booknow"><a class="main-nav-link booknow" href="">book now</a></li>
+
+                <li><a class="main-nav-link sponsors" href="#booknow">book now</a></li>
+            </ul>
+            <div class="burger">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times hidden"></i>
+            </div>
+        </nav>
+    </header>
+    <section id="room-container">
+        <div class="room-content">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/hotel1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/hotel1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/hotel1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="room-icons">
+                <div class="icons">
+                    <i class="material-icons">live_tv</i>
+                    <label for="">HD LED TV</label>
+                </div>
+                <div class="icons">
+                    <i class="material-icons">support_agent</i>
+                    <label for="">24x7 Service</label>
+                </div>
+                <div class="icons">
+                    <i class="material-icons">phone_in_talk</i>
+                    <label for="">Telephone</label>
+                </div>
+                <div class="icons">
+                    <i class="material-icons">wifi</i>
+                    <label for="">Wifi Internet</label>
+                </div>
+                <div class="icons">
+                    <i class="material-icons">coffee_maker</i>
+                    <label for="">Coffee Maker</label>
+                </div>
+                <div class="icons">
+                    <i class="material-icons">deck</i>
+                    <label for="">Balcony</label>
+                </div>
+            </div>
+            <button type="submit" class="primary-btn booknow-btn cta-btn"> <a href="#room-form">Book Now</a> </button>
+            <div class="room-details">
+                <div class="description">
+                    <h1>Description</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugit soluta debitis quos
+                        pariatur
+                        tenetur dignissimos quo doloribus itaque illo odio neque autem voluptatibus, cum aliquid. Saepe
+                        modi
+                        explicabo, inventore aperiam nisi dolor obcaecati incidunt voluptatem ab?</p>
+                </div>
+                <div class="room-amenities">
+                    <h3>Room Amenities</h3>
+                    <p>Our rooms come with all modern amenities to make your stay a comfortable one.</p>
+                    <div class="amenities-list">
+                        <p><span style="color: green;">&checkmark; </span>Air Conditioning</p>
+                        <p><span style="color: green;">&checkmark; </span>40” LED TV</p>
+                        <p><span style="color: green;">&checkmark; </span>Telephone</p>
+                        <p><span style="color: green;">&checkmark; </span>Mini Fridge</p>
+                        <p><span style="color: green;">&checkmark; </span>Tea/Coffee Maker</p>
+                        <p><span style="color: green;">&checkmark; </span>Hot & Cold Water</p>
+                    </div>
+                </div>
+                <div class="hotel-policy">
+                    <h2>Hotel Policies</h2>
+                    <p>- Policy 1</p>
+                    <p>- Policy 1</p>
+                    <p>- Policy 1</p>
+                    <p>- Policy 1</p>
+                    <p>- Policy 1</p>
+                    <p>- Policy 1</p>
+                </div>
+            </div>
+        </div>
+        <div class="room-form" id="room-form">
+            <div class="check-inout">
+                <div class="date-field">
+                    <label for="">Check-In Date</label>
+                    <input type="date">
+                </div>
+                <div class="date-field">
+                    <label for="">Check-Out Date</label>
+                    <input type="date">
+                </div>
+            </div>
+            <div class="person-counter">
+                <div class="counter-field">
+                    <label for="">Adults</label>
+                    <div class="counter-btn">
+                        <i class="fas fa-minus"></i>
+                        <input type="text" value="1">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <div class="counter-field">
+                    <label for="">Children</label>
+                    <div class="counter-btn">
+                        <i class="fas fa-minus"></i>
+                        <input type="text" value="0">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+
+            </div>
+            <div class="input-field">
+
+                <label for="">Personal Information</label>
+                <input type=" text" name="" id="fullname" placeholder="Full Name" />
+                <input type=" text" name="" id="email" placeholder="Email ID" />
+                <input type=" text" name="" id="mobileno" placeholder="Mobile Number" />
+                <button type="submit" class="primary-btn booknow-btn">Book Now</button>
+                <button type="submit" class="primary-btn call-btn">Call +91 12345 67890</button>
+            </div>
+        </div>
+    </section>
+    <footer id="foo-bar">
+        <div class="top">
+            <div class="left">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="">
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae eveniet natus optio quos, ipsa
+                    praesentium esse eius perspiciatis. Amet temporibus natus repudiandae aliquam esse, quidem officia
+                    quos laudantium dolor odit pariatur est rem ex placeat iure, molestiae .</p>
+            </div>
+            <div class="middle">
+                <h3>USEFUL LINKS</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li>
+                        <a href="#event">Events</a>
+                    </li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                <h3>CONTACT US</h3>
+                <p>RIDLEY INTERNATIONAL</p>
+                <p>188, Raja S.C. Mallick Rd, Kolkata-700032 India
+                </p>
+                <!-- <p><span>Phone: </span>+91 98361 05125</p> -->
+                <p><span>Email: </span>ridleyinternational@gmail.com</p>
+                <div class="social">
+                    <a href=""><i class="fab fa-twitter-square"></i></a>
+                    <a href=""><i class="fab fa-facebook-square"></i></a>
+                    <a href=""><i class="fab fa-instagram-square"></i></a>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>Copyrights &copy;2021. All Rights Reserved </p>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/purecounter/purecounter.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

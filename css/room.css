@@ -1,0 +1,518 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1;
+  font-weight: 400;
+  list-style: none;
+  text-decoration: none;
+  overflow-x: hidden;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  font-family: "Poppins";
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hidden {
+  display: none;
+}
+.reverse-flex {
+  flex-direction: row-reverse;
+}
+.booknow {
+  border: solid 2px #05c0c7;
+  border-radius: 2.5px;
+}
+.booknow:hover {
+  background-color: #05c0c7;
+  color: #fff;
+}
+.booknow:hover a {
+  background-color: #05c0c7;
+  color: #fff;
+}
+/* NAVIGATION BAR */
+
+header {
+  width: 100vw;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 10;
+}
+
+.header-scrolled {
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: all 0.5s;
+}
+nav {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1vw 4vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  /* border: solid 1px red; */
+}
+.logo img {
+  height: 2.5vw;
+}
+
+.main-nav-list {
+  display: flex;
+  gap: 0.5vw;
+  font-family: "Nunito Sans";
+  list-style: none;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.main-nav-link:visited,
+.main-nav-link:link {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 0.7vw;
+  font-weight: 800;
+  letter-spacing: 2.5px;
+  line-height: 1.1;
+  padding: 0.5vw 0.7vw;
+  border: solid 2px transparent;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: rgb(27, 216, 175);
+}
+
+.btn-cta:visited,
+.btn-cta:link {
+  color: #2ff1c7;
+  border-bottom: solid 2px rgb(47, 241, 199);
+}
+
+.btn-cta:hover,
+.btn-cta:active {
+  color: rgb(47, 241, 199);
+}
+
+/***************** BURGER MENU *********************/
+
+.burger {
+  display: none;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+.burger div {
+  width: 2.5rem;
+  height: 0.3rem;
+  background-color: #fff;
+  margin: 5px;
+}
+
+.fa-bars {
+  color: white;
+  font-size: 8vw;
+  transition: all 0.5s;
+}
+
+.fa-times {
+  color: #fff;
+  font-size: 8vw;
+  transition: all 0.5s;
+}
+
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.514);
+  transition: all 0.5s ease-in-out;
+}
+.room-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  width: 67%;
+}
+.carousel {
+  width: 100%;
+  object-fit: cover;
+}
+.carousel-item {
+  width: 100%;
+  object-fit: cover;
+}
+#room-container {
+  padding: 0 4vw;
+  padding-top: 6vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3vw;
+}
+.room-icons {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.icons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5vw;
+}
+.icons label {
+  color: #4e4e4e;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.material-icons {
+  font-size: 3vw;
+  font-weight: 300;
+  color: #a3a3a3;
+}
+.room-form {
+  padding: 2.5vw;
+  background-color: #f8f8f8;
+  display: flex;
+  width: 33%;
+  flex-direction: column;
+  gap: 1vw;
+}
+.check-inout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1vw;
+}
+.date-field {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+.date-field label {
+  font-size: 1vw;
+  font-weight: 500;
+}
+.date-field input {
+  padding: 0.5vw;
+  height: 2.5vw;
+  border: 1.6px solid #e6e6e6;
+  border-radius: 0.25vw;
+}
+.person-counter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1vw;
+}
+.counter-field {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+}
+.counter-btn {
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+}
+.counter-btn input {
+  width: 30%;
+  text-align: center;
+  height: 1.8vw;
+}
+.fa-plus {
+  border: solid 1px #000000;
+  border-left: 0px;
+  height: 1.8vw;
+  width: 2.4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.fa-minus {
+  border: solid 1px #000000;
+  border-right: 0px;
+  height: 1.8vw;
+  width: 2.4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.input-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1vw;
+}
+
+.input-field label {
+  font-size: 1vw;
+  font-weight: 500;
+}
+.input-field input {
+  width: 100%;
+  height: 2.5vw;
+  border-radius: 0.25vw;
+  padding: 0vw 1vw;
+  font-size: 0.9vw;
+  border: 1.6px solid #e6e6e6;
+}
+
+.primary-btn {
+  width: 100%;
+  height: 3vw;
+  border-radius: 0.25vw;
+  color: rgb(20, 20, 20);
+  font-weight: 500;
+  font-size: 1vw;
+  border: solid transparent;
+  transition: all 0.3s;
+}
+.booknow-btn {
+  background-color: #05c0c7;
+  color: #fff;
+}
+.booknow-btn:hover {
+  background-color: #00abb1;
+  color: #fff;
+}
+.call-btn {
+  border: solid 2px #05c0c7;
+  background-color: #fff;
+}
+.call-btn:hover {
+  background-color: #05c0c7;
+  color: #fff;
+}
+.room-details {
+  width: 100%;
+  margin: auto;
+  padding: 3vw;
+}
+.description h1 {
+  font-size: 2.3vw;
+}
+.description p {
+  font-size: 0.9vw;
+  line-height: 1.4;
+  letter-spacing: 1.2px;
+}
+.room-amenities h3 {
+  font-size: 1.7vw;
+}
+.room-amenities p {
+  font-size: 1vw;
+  line-height: 1.4;
+  margin-bottom: 1.2vw;
+}
+.amenities-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.hotel-policy {
+  width: 100%;
+}
+.hotel-policy h2 {
+  font-size: 2vw;
+}
+.hotel-policy p {
+  font-size: 1vw;
+}
+
+.cta-btn {
+  display: none;
+}
+.cta-btn a {
+  color: white;
+  text-decoration: none;
+}
+/*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #141414;
+  margin-top: 4vw;
+}
+
+.top {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2vw;
+
+  align-items: center;
+  padding: 2vw 4vw;
+}
+
+.left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.left img {
+  height: 4vw;
+  margin-bottom: 3.2rem;
+}
+
+.left p {
+  font-size: 0.8vw;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  color: #c4c3c3;
+  text-align: center;
+}
+
+.middle {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.middle h3 {
+  color: white;
+  font-size: 1vw;
+  font-weight: 500;
+  letter-spacing: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 2.4rem;
+  border-bottom: solid 2px #2ff1c7;
+}
+.middle ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  list-style: none;
+  padding: 0;
+}
+.middle ul li {
+  width: 50%;
+  border-bottom: solid 1px #c2c2c2;
+  padding: 3px;
+  list-style: none;
+}
+.middle ul li a {
+  color: #c2c2c2;
+  font-size: 0.8vw;
+
+  list-style: none;
+  text-decoration: none;
+}
+.middle ul li a:hover {
+  color: #2ff1c7;
+  transition: all 0.3s;
+}
+
+.right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.right h3 {
+  color: white;
+  font-size: 1vw;
+  font-weight: 500;
+  letter-spacing: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 2.4rem;
+  border-bottom: solid 2px #2ff1c7;
+}
+
+.right p {
+  color: #c4c3c3;
+  font-size: 0.8vw;
+  line-height: 1.6;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.social {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 16rem;
+}
+
+.social a i {
+  font-size: 3.2rem;
+  color: white;
+}
+
+.fa-twitter-square:hover {
+  color: rgb(30, 191, 255);
+}
+
+.fa-facebook-square:hover {
+  color: rgb(55, 105, 243);
+}
+
+.fa-instagram-square:hover {
+  color: rgb(212, 30, 212);
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  padding: 1.5vw;
+}
+
+.bottom p {
+  font-size: 1.3rem;
+  color: #c4c3c3;
+  letter-spacing: 1px;
+  text-align: center;
+}

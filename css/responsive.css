@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media screen and (max-width: 800px) {
+  /************************* HEADER *************************************/
+  .main-nav-list {
+    position: absolute;
+    height: 102vh;
+    top: 0rem;
+    right: 0;
+    gap: 3vh;
+    background-color: rgba(20, 20, 20, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+    width: 60%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 10;
+  }
+
+  .burger {
+    display: block;
+    z-index: 10;
+  }
+  .nav-active {
+    transform: translateX(2%);
+  }
+  nav {
+    padding: 1.6vh;
+  }
+
+  header {
+    width: 100vw;
+    position: fixed;
+    z-index: 10;
+  }
+
+  .main-nav-link:visited,
+  .main-nav-link:link {
+    font-size: 1.8vh;
+    font-weight: 800;
+    letter-spacing: 3.2px;
+    line-height: 1.3;
+    padding: 0.7vh 1.4vh;
+  }
+  .logo img {
+    height: 6vw;
+  }
+  /************************* HERO*************************************/
+  .section--hero {
+    width: 100vw;
+    height: 30vh;
+  }
+  .carousel-item {
+    width: 100vw;
+    height: 30vh;
+    object-fit: cover;
+  }
+  .hero-content {
+    width: 100vw;
+    height: 30vh;
+  }
+  .hero-content h2 {
+    font-size: 5vw;
+  }
+  .hero-content h1 {
+    font-size: 10vw;
+  }
+  .backdrop {
+    width: 100vw;
+    height: 102vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }
+  .carousel-control-prev {
+    transform: scale(1);
+    position: absolute;
+    z-index: 3;
+  }
+  .carousel-control-next {
+    transform: scale(1);
+    position: absolute;
+    z-index: 3;
+  }
+  .hero-overlay {
+    width: 100vw;
+    height: 30vh;
+  }
+  /***************** EXPERIENCE SECTION*********************/
+  #experience {
+    padding-top: 2vw;
+  }
+  .experience-wrap {
+    gap: 8vw;
+    padding: 6vw;
+  }
+  iframe {
+    width: 100%;
+    height: 45vw;
+  }
+  .experience-container {
+    width: 100%;
+    gap: 4vw;
+  }
+  .experience-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+  }
+
+  .experience-card-img {
+    width: 100%;
+  }
+  .experience-card-img img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+  }
+  .experience-card-content {
+    width: 100%;
+    padding: 2vw;
+  }
+  .experience-card-content h1 {
+    font-size: 8vw;
+  }
+
+  .experience-card-content p {
+    font-size: 3.6vw;
+  }
+  .section-title {
+    border-bottom: solid 3px #05c0c7;
+  }
+  .section-title p {
+    font-size: 6vw;
+  }
+  /***************** ROOMS SECTION*********************/
+  #rooms {
+    padding-top: 2vw;
+  }
+  .rooms-wrap {
+    max-width: 120rem;
+    gap: 8vw;
+    padding: 2vw;
+  }
+  .section-title p {
+    font-size: 6vw;
+  }
+  .rooms-container {
+    gap: 2vw;
+  }
+  .room-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+    padding: 4vw;
+  }
+
+  .price-tag {
+    position: absolute;
+    top: 5%;
+    right: -4%;
+    padding: 2vw 4vw;
+    background-color: #05c0c7;
+    color: #fff;
+    animation: zoomInAnimation 1s ease-in;
+  }
+  .price-tag span {
+    font-size: 3.5vw;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+  .room-card-img {
+    width: 100%;
+    position: relative;
+  }
+  .room-card-img img {
+    width: 100%;
+    height: auto;
+  }
+  .room-card-content {
+    padding: 2vw 3vw;
+  }
+
+  .room-card-content p {
+    font-size: 3.4vw;
+    line-height: 1.5;
+  }
+  .amenities-icons {
+    gap: 4vw;
+    padding: 3vw;
+  }
+
+  .view-room-btn {
+    padding: 2vw 4vw;
+    border-radius: 0.7vw;
+    font-size: 3.6vw;
+    margin: 2.5vw 0;
+  }
+
+  /************************* FOOTER*************************************/
+  footer {
+    margin-top: 10vw;
+  }
+  .top {
+    grid-template-columns: 1fr;
+    gap: 2vw;
+    padding: 6vw;
+  }
+
+  .left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .left img {
+    height: 10vw;
+    margin-bottom: 4vw;
+  }
+
+  .left p {
+    font-size: 2.8vw;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .middle {
+    align-items: flex-start;
+    justify-content: center;
+    display: none;
+  }
+  .middle h3 {
+    font-size: 3.6vw;
+
+    letter-spacing: 0.5px;
+    padding: 1vw;
+    margin-bottom: 2.6vw;
+  }
+  .middle ul {
+    align-items: flex-start;
+    gap: 2.4vw;
+  }
+
+  .middle ul li a {
+    font-size: 4vw;
+  }
+  .right h3 {
+    font-size: 3.6vw;
+
+    letter-spacing: 0.5px;
+    padding: 1vw;
+    margin-bottom: 2.6vw;
+  }
+  .right p {
+    font-size: 2.8vw;
+  }
+
+  .social {
+    width: 100%;
+    justify-content: center;
+    gap: 6vw;
+  }
+
+  .social a i {
+    font-size: 3.2rem;
+  }
+
+  .bottom {
+    padding: 6vw;
+  }
+
+  .bottom p {
+    font-size: 3.2vw;
+  }
+}
