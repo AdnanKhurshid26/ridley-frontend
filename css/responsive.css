@@ -95,10 +95,7 @@ html {
     position: absolute;
     z-index: 3;
   }
-  .hero-overlay {
-    width: 100vw;
-    height: 30vh;
-  }
+
   /***************** EXPERIENCE SECTION*********************/
   #experience {
     padding-top: 2vw;
